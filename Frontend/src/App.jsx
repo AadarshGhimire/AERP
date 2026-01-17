@@ -1,10 +1,17 @@
 import React from 'react'
-function App() {
+import { createBrowserRouter, createRoutesFromElements,Route,RouterProvider } from 'react-router-dom'
+import HomePage from './pages/HomePage.jsx'
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route>
+      <Route path='/' element={<HomePage />} />
+    </Route>
+  )
+)
+export default function App() {
   return (
     <>
-     hello world
+     <RouterProvider router={router} />
     </>
   )
 }
-
-export default App
