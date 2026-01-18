@@ -36,9 +36,9 @@ export default function HeritageOfExcellence() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
 
             {/* Card 1 */}
-            <div className="border-slate-50 bg-slate-100 rounded-xl p-8 h-48 flex flex-col justify-center gap-3">
+            <div className="HeritageOfExcellence-card">
               <Factory className="text-green-600" size={40} />
-              <h3 className="text-3xl font-bold text-slate-900">
+              <h3 className="HeritageOfExcellence-card-text">
                 Multi Domain
               </h3>
               <p className="text-slate-600">
@@ -47,9 +47,9 @@ export default function HeritageOfExcellence() {
             </div>
 
             {/* Card 2 */}
-            <div className="border-slate-50 bg-slate-100 rounded-xl p-8 h-48 flex flex-col justify-center gap-3">
+            <div className="HeritageOfExcellence-card">
               <Globe className="text-green-600" size={40} />
-              <h3 className="text-3xl font-bold text-slate-900">
+              <h3 className="HeritageOfExcellence-card-text">
                 Global
               </h3>
               <p className="text-slate-600">
@@ -58,9 +58,9 @@ export default function HeritageOfExcellence() {
             </div>
 
             {/* Card 3 */}
-            <div className="border-slate-50 bg-slate-100 rounded-xl p-8 h-48 flex flex-col justify-center gap-3">
+            <div className="HeritageOfExcellence-card">
               <Shield className="text-green-600" size={40} />
-              <h3 className="text-3xl font-bold text-slate-900">
+              <h3 className="HeritageOfExcellence-card-text">
                 24/7
               </h3>
               <p className="text-slate-600">
@@ -69,9 +69,9 @@ export default function HeritageOfExcellence() {
             </div>
 
             {/* Card 4 */}
-            <div className="border-slate-50 bg-slate-100 rounded-xl p-8 h-48 flex flex-col justify-center gap-3">
+            <div className="HeritageOfExcellence-card">
               <Award className="text-green-600" size={40} />
-              <h3 className="text-3xl font-bold text-slate-900">
+              <h3 className="HeritageOfExcellence-card-text">
                 Professional
               </h3>
               <p className="text-slate-600">

@@ -4,7 +4,6 @@ export default function WhyChooseUs() {
   return (
     <section className="w-full bg-slate-50 py-24">
       <div className="max-w-7xl mx-auto px-4 lg:px-16">
-        
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto">
           <h2 className="text-4xl font-bold text-slate-900">
@@ -17,9 +16,9 @@ export default function WhyChooseUs() {
         {/* Cards */}
         <div className="mt-16 grid gap-10 lg:gap-20 grid-cols-1 lg:grid-cols-3 justify-items-center">
           {/* Card 1 */}
-          <div className="lg:w-96 lg:h-96 border border-slate-200 rounded-xl p-8 shadow-sm transition-all duration-500 ease-out hover:border-green-600 hover:shadow-lg hover:-translate-y-2 hover:delay-200 space-y-2">
+          <div className="why-choose-us-card">
             <Shield size={35} className="text-green-600"/>
-            <h3 className="text-xl font-semibold text-slate-900">
+            <h3 className="text">
               Reliability Engineering That Reduces Risk
             </h3>
             <p className="text-slate-600 leading-relaxed">
@@ -29,9 +28,9 @@ export default function WhyChooseUs() {
           </div>
 
           {/* Card 2 */}
-          <div className="lg:w-96 lg:h-96 border border-slate-200 rounded-xl p-8 shadow-sm transition-all duration-500 ease-out hover:border-green-600 hover:shadow-lg hover:-translate-y-2 hover:delay-200 space-y-2">
+          <div className="why-choose-us-card">
             <Zap size={35} className="text-green-600"/>
-            <h3 className="text-xl font-semibold text-slate-900 ">
+            <h3 className="text">
               Advanced Engineering Analysis & Failure Diagnostics
             </h3>
 
@@ -40,9 +39,9 @@ export default function WhyChooseUs() {
             </p>
           </div>
           {/* Card 3 */}
-          <div className="lg:w-96 lg:h-96 border border-slate-200 rounded-xl p-8 shadow-sm transition-all duration-500 ease-out hover:border-green-600 hover:shadow-lg hover:-translate-y-2 hover:delay-200 space-y-2">
+          <div className="why-choose-us-card">
             <Users size={35} className="text-green-600"/>
-            <h3 className="text-2xl font-semibold text-slate-900 mb-4">
+            <h3 className="text">
               Project Management With Measurable Execution
             </h3>
             <p className="text-slate-600 leading-relaxed">
