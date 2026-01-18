@@ -15,3 +15,34 @@
     transform: translateY(0);
   }
 }
+
+/* why choose us Card */
+@layer components {
+  .why-choose-us-card {
+    @apply lg:w-96 lg:h-96 border border-slate-200 rounded-xl p-8 shadow-sm transition-all duration-500 ease-out hover:border-green-600 hover:shadow-lg hover:-translate-y-2 hover:delay-200 space-y-2;
+  }
+  .text{
+    @apply text-xl font-semibold text-slate-900;
+  }
+}
+/* Industries we serve Card */
+@layer components {
+  .industries-we-serve-card {
+    @apply w-full max-w-xs h-56 border border-slate-200 rounded-xl bg-slate-50 hover:border-emerald-500 flex flex-col items-center justify-center text-center gap-3 transition-all duration-300;
+  }
+  .industries-we-serve-card-text{
+    @apply w-16 h-16 rounded-full bg-emerald-100 flex items-center justify-center group-hover:bg-emerald-500;
+  }
+  .industries-we-serve-card-icon{
+    @apply text-emerald-600 transition-colors duration-300 group-hover:text-white w-8 h-8;
+  }
+}
+/* HeritageOfExcellence */
+@layer components{
+  .HeritageOfExcellence-card{
+    @apply border-slate-50 bg-slate-100 rounded-xl p-8 h-48 flex flex-col justify-center gap-3;
+  }
+  .HeritageOfExcellence-card-text{
+    @apply text-3xl font-bold text-slate-900;
+  }
+}

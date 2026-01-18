@@ -17,7 +17,7 @@ export default function NavBar() {
         {/* Navigation */}
         <nav className="hidden lg:flex items-center gap-8 text-[20px] font-medium">
           <NavLink
-            to="/Home"
+            to="/"
             className={({ isActive }) =>
               isActive
                 ? "text-green-700"

@@ -1,6 +1,5 @@
 import React from "react";
 import { Fuel, FlaskConical, Zap, Factory } from "lucide-react";
-
 export default function IndustriesWeServe() {
   return (
     <section className="w-full bg-white py-24">
@@ -18,27 +17,21 @@ export default function IndustriesWeServe() {
         </div>
 
         {/* Cards */}
-        <div className="mt-16 grid gap-8
-                        grid-cols-1 lg:grid-cols-4
-                        justify-items-center">
+        <div className="mt-16 grid gap-8 grid-cols-1 lg:grid-cols-4 justify-items-center">
 
           {/* Card 1 */}
-          <div className="w-full max-w-xs h-56 border border-slate-200 rounded-xl
-                          bg-slate-50 flex flex-col items-center justify-center
-                          text-center gap-3 shown transition">
-            <div className="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center">
-              <Fuel className="text-green-600 w-8 h-8" />
+          <div className="group industries-we-serve-card">
+            <div className="industries-we-serve-card-text">
+            <Fuel className="industries-we-serve-card-icon" />
             </div>
             <h3 className="text-xl font-semibold text-slate-900">Oil & Gas</h3>
             <p className="text-slate-600">Refining & Petrochemical</p>
           </div>
 
           {/* Card 2 */}
-          <div className="w-full max-w-xs h-56 border border-slate-200 rounded-xl
-                          bg-slate-50 flex flex-col items-center justify-center
-                          text-center gap-3 transition">
-            <div className="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center">
-              <Zap className="text-green-600 w-8 h-8" />
+          <div className="group industries-we-serve-card">
+            <div className="industries-we-serve-card-text">
+              <Zap className="industries-we-serve-card-icon" />
             </div>
             <h3 className="text-xl font-semibold text-slate-900">
               Power Generation
@@ -46,12 +39,10 @@ export default function IndustriesWeServe() {
             <p className="text-slate-600">Utilities & Energy</p>
           </div>
 
-          {/* Card 3 (Highlighted) */}
-          <div className="w-full max-w-xs h-56 rounded-xl border border-slate-200
-                          bg-slate-50 flex flex-col items-center justify-center
-                          text-center gap-3 shadow-md transition">
-            <div className="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center">
-              <Factory className="text-green-600 w-8 h-8" />
+          {/* Card 3  */}
+          <div className="group industries-we-serve-card">
+            <div className="industries-we-serve-card-text">
+              <Factory className="industries-we-serve-card-icon" />
             </div>
             <h3 className="text-xl font-semibold text-slate-900">
               Manufacturing
@@ -60,11 +51,9 @@ export default function IndustriesWeServe() {
           </div>
 
           {/* Card 4 */}
-          <div className="w-full max-w-xs h-56 border border-slate-200 rounded-xl
-                          bg-slate-50 flex flex-col items-center justify-center
-                          text-center gap-3 transition">
-            <div className="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center">
-              <FlaskConical className="text-green-600 w-8 h-8" />
+          <div className="group industries-we-serve-card">
+            <div className="industries-we-serve-card-text">
+              <FlaskConical className="industries-we-serve-card-icon" />
             </div>
             <h3 className="text-xl font-semibold text-slate-900">Chemical</h3>
             <p className="text-slate-600">Processing & Storage</p>
