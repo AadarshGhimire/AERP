@@ -2,11 +2,19 @@ import React from 'react'
 import { createBrowserRouter, createRoutesFromElements,Route,RouterProvider } from 'react-router-dom'
 import HomePage from './pages/HomePage.jsx'
 import AboutPage from './pages/AboutPage.jsx'
+import ServicesPage from './pages/ServicesPage.jsx'
+import ContactPage from './pages/ContactPage.jsx'
+import ResourcesPage from './pages/ResourcesPage.jsx'
+import StorePage from './pages/StorePage.jsx'
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route>
       <Route path='/' element={<HomePage />} />
       <Route path='/about' element={<AboutPage />} />
+      <Route path='/services' element={<ServicesPage />} />
+      <Route path='/contact' element={<ContactPage />} />
+      <Route path='/resources' element={<ResourcesPage />} />
+      <Route path='/store' element={<StorePage />} />
     </Route>
   )
 )
