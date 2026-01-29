@@ -8,7 +8,7 @@ import OurApproach from '../components/About/OurApproach.jsx'
 import Footer from '../components/Navigation/Footer.jsx'
 export default function AboutPage() {
   return (
-    <div>
+    <div className='animate-drop'>
       <NavBar />
       <Hero />
       <OurStory />

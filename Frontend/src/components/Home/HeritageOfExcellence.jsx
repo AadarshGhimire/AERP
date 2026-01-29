@@ -5,10 +5,7 @@ export default function HeritageOfExcellence() {
   return (
     <section className="w-full bg-white py-24">
       <div className="max-w-7xl mx-auto px-6 lg:px-16">
-        {/* Main Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-
-          {/* LEFT CONTENT */}
           <div>
             <h2 className="text-3xl lg:text-4xl font-bold text-slate-900">
               Our Heritage of Excellence
@@ -31,11 +28,8 @@ export default function HeritageOfExcellence() {
               Learn more about our legacy <MoveRight size={18} />
             </button>
           </div>
-
-          {/* RIGHT CARDS */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
 
-            {/* Card 1 */}
             <div className="HeritageOfExcellence-card">
               <Factory className="text-green-600" size={40} />
               <h3 className="HeritageOfExcellence-card-text">
@@ -46,7 +40,6 @@ export default function HeritageOfExcellence() {
               </p>
             </div>
 
-            {/* Card 2 */}
             <div className="HeritageOfExcellence-card">
               <Globe className="text-green-600" size={40} />
               <h3 className="HeritageOfExcellence-card-text">
@@ -57,7 +50,6 @@ export default function HeritageOfExcellence() {
               </p>
             </div>
 
-            {/* Card 3 */}
             <div className="HeritageOfExcellence-card">
               <Shield className="text-green-600" size={40} />
               <h3 className="HeritageOfExcellence-card-text">
@@ -68,7 +60,6 @@ export default function HeritageOfExcellence() {
               </p>
             </div>
 
-            {/* Card 4 */}
             <div className="HeritageOfExcellence-card">
               <Award className="text-green-600" size={40} />
               <h3 className="HeritageOfExcellence-card-text">
