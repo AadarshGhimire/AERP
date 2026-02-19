@@ -1,0 +1,18 @@
+import mongoose from 'mongoose';
+
+const whyChooseUsSchema = new mongoose.Schema({
+  title: {
+    type: String,
+    required: true,
+  },
+  description: {
+    type: String,
+    required: true,
+  },
+  icon:{
+    type: String,
+    required: true,
+  },
+}, { timestamps: true });
+
+export const WhyChooseUs = mongoose.model('WhyChooseUs', whyChooseUsSchema);
