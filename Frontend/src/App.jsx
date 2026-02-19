@@ -6,6 +6,7 @@ import ServicesPage from './pages/ServicesPage.jsx'
 import ContactPage from './pages/ContactPage.jsx'
 import ResourcesPage from './pages/ResourcesPage.jsx'
 import StorePage from './pages/StorePage.jsx'
+import Store from './components/Store/Store.jsx'
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route>
@@ -15,6 +16,7 @@ const router = createBrowserRouter(
       <Route path='/contact' element={<ContactPage />} />
       <Route path='/resources' element={<ResourcesPage />} />
       <Route path='/store' element={<StorePage />} />
+      <Route path='/store/books' element={<Store />} />
     </Route>
   )
 )

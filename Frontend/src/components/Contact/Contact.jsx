@@ -1,9 +1,44 @@
-import React from "react";
+import React, { useState } from "react";
+import axios from "axios";
 
 export default function Contact() {
+
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    company: "",
+    serviceInterest: "RaaS Subscription",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const res = await axios.post("http://localhost:5000/api/contact", formData);
+
+      alert(res.data.message || "Message sent successfully!");
+
+      setFormData({
+        name: "",
+        email: "",
+        company: "",
+        serviceInterest: "RaaS Subscription",
+        message: "",
+      });
+    } catch (error) {
+      console.log(error);
+      alert("Something went wrong. Please try again.");
+    }
+  };
+
   return (
     <div className="bg-gray-50 min-h-screen">
-      
+
       {/* HERO SECTION */}
       <section className="w-full h-[60vh] flex items-center justify-center bg-gradient-to-r from-slate-900 via-slate-800 to-emerald-900 text-white">
         <div className="text-center px-4">
@@ -14,25 +49,30 @@ export default function Contact() {
             We'd love to hear from you. Let's discuss your project.
           </p>
         </div>
-      </section>
+      </section>  
 
       {/* CONTACT CONTENT */}
       <section className="flex justify-center px-4 py-16">
         <div className="max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-8">
-          
+
           {/* LEFT: CONTACT FORM */}
           <div className="bg-white rounded-xl shadow-md p-8">
             <h2 className="text-2xl font-semibold mb-6">Send Us a Message</h2>
 
-            <form className="space-y-5">
+            <form className="space-y-5" onSubmit={handleSubmit}>
+
               <div>
                 <label className="block text-sm font-medium mb-1">
                   Full Name <span className="text-red-500">*</span>
                 </label>
                 <input
                   type="text"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
                   placeholder="John Doe"
                   className="w-full border rounded-md px-4 py-2 focus:ring-2 focus:ring-blue-500"
+                  required
                 />
               </div>
 
@@ -42,8 +82,12 @@ export default function Contact() {
                 </label>
                 <input
                   type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
                   placeholder="john@company.com"
                   className="w-full border rounded-md px-4 py-2 focus:ring-2 focus:ring-blue-500"
+                  required
                 />
               </div>
 
@@ -53,6 +97,9 @@ export default function Contact() {
                 </label>
                 <input
                   type="text"
+                  name="company"
+                  value={formData.company}
+                  onChange={handleChange}
                   placeholder="Your Company"
                   className="w-full border rounded-md px-4 py-2 focus:ring-2 focus:ring-blue-500"
                 />
@@ -62,7 +109,12 @@ export default function Contact() {
                 <label className="block text-sm font-medium mb-1">
                   Service Interest
                 </label>
-                <select className="w-full border rounded-md px-4 py-2 bg-gray-100 focus:ring-2 focus:ring-blue-500">
+                <select
+                  name="serviceInterest"
+                  value={formData.serviceInterest}
+                  onChange={handleChange}
+                  className="w-full border rounded-md px-4 py-2 bg-gray-100 focus:ring-2 focus:ring-blue-500"
+                >
                   <option>RaaS Subscription</option>
                   <option>Consulting</option>
                   <option>Support</option>
@@ -75,8 +127,12 @@ export default function Contact() {
                 </label>
                 <textarea
                   rows="4"
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
                   placeholder="Tell us about your needs..."
                   className="w-full border rounded-md px-4 py-2 focus:ring-2 focus:ring-blue-500"
+                  required
                 />
               </div>
 
@@ -86,6 +142,7 @@ export default function Contact() {
               >
                 Send Message
               </button>
+
             </form>
           </div>
 
@@ -113,7 +170,7 @@ export default function Contact() {
 
               <div>
                 <p className="font-medium">Business Hours</p>
-                <p>Mon–Fri: 8:00 AM – 5:00 PM CST</p>
+                <p>Mon-Fri: 8:00 AM - 5:00 PM CST</p>
               </div>
             </div>
           </div>

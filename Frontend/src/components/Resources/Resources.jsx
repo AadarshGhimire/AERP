@@ -7,7 +7,7 @@ const resourcesData = [
     type: "White Papers",
     title: "Predictive Maintenance Best Practices",
     description: "Guide to implementing predictive maintenance strategies.",
-    date: "Dec 15, 2024",
+    date: "2024-12-15",
     icon: <FileText size={18} />,
   },
   {
@@ -15,7 +15,7 @@ const resourcesData = [
     type: "Webinars",
     title: "Vibration Analysis Introduction",
     description: "Fundamentals of vibration analysis for equipment.",
-    date: "Nov 20, 2024",
+    date: "2024-11-20",
     icon: <Video size={18} />,
   },
   {
@@ -23,7 +23,7 @@ const resourcesData = [
     type: "Blogs",
     title: "Root Cause Analysis Case Study",
     description: "Real-world RCFA example solving equipment failures.",
-    date: "Oct 10, 2024",
+    date: "2024-10-10",
     icon: <BookOpen size={18} />,
   },
 ];
@@ -37,51 +37,42 @@ export default function Resources() {
   const filteredData = resourcesData.filter((item) => {
     const matchesFilter =
       activeFilter === "All" || item.type === activeFilter;
-    const matchesSearch = item.title
-      .toLowerCase()
-      .includes(search.toLowerCase());
+
+    const matchesSearch =
+      item.title.toLowerCase().includes(search.toLowerCase()) ||
+      item.description.toLowerCase().includes(search.toLowerCase());
+
     return matchesFilter && matchesSearch;
   });
 
   return (
-    <section className="max-w-7xl mx-auto px-4 py-12">
-      
-      {/* Header */}
-      <div className="mb-10">
-        <h1 className="text-3xl font-bold text-gray-900">
-          Resources
-        </h1>
-        <p className="text-gray-600 mt-2 max-w-2xl">
-          Explore our latest white papers, blogs, and webinars to stay ahead in reliability and maintenance.
-        </p>
-      </div>
-
-      {/* Search & Filters */}
-      <div className="bg-white rounded-2xl border shadow-sm p-6 flex flex-col gap-4 md:flex-row md:items-center md:gap-6">
+    <section className="max-w-7xl mx-auto px-6 py-10">
+      {/* Search + Filters Bar */}
+      <div className="bg-white border shadow-sm rounded-2xl px-6 py-6 flex flex-col gap-5 lg:flex-row lg:items-center lg:justify-between">
         
         {/* Search */}
-        <div className="relative flex-1">
-          <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400" />
+        <div className="relative flex-1 max-w-3xl">
+          <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400" size={20} />
           <input
             type="text"
-            placeholder="Search resources..."
+            placeholder="Search..."
             value={search}
             onChange={(e) => setSearch(e.target.value)}
-            className="w-full pl-12 pr-4 py-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-green-600"
+            className="w-full border rounded-xl pl-12 pr-4 py-3 text-gray-700 focus:outline-none focus:ring-2 focus:ring-green-700"
           />
         </div>
 
         {/* Filters */}
-        <div className="flex flex-wrap gap-2">
+        <div className="flex flex-wrap gap-3 justify-start lg:justify-end">
           {filters.map((filter) => (
             <button
               key={filter}
               onClick={() => setActiveFilter(filter)}
-              className={`px-5 py-2 rounded-full text-sm font-medium transition
+              className={`px-6 py-3 rounded-xl text-sm font-medium border transition
                 ${
                   activeFilter === filter
-                    ? "bg-green-700 text-white shadow"
-                    : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+                    ? "bg-green-800 text-white border-green-800 shadow-sm"
+                    : "bg-white text-gray-700 border-gray-200 hover:bg-gray-50"
                 }`}
             >
               {filter}
@@ -90,15 +81,15 @@ export default function Resources() {
         </div>
       </div>
 
-      {/* Cards */}
-      <div className="grid gap-6 mt-12 sm:grid-cols-2 lg:grid-cols-3">
+      {/* Resource Cards */}
+      <div className="grid gap-8 mt-12 sm:grid-cols-2 lg:grid-cols-3">
         {filteredData.map((item) => (
           <div
             key={item.id}
-            className="group bg-white border rounded-2xl p-6 transition hover:shadow-lg hover:-translate-y-1"
+            className="bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-md transition"
           >
             {/* Type */}
-            <div className="flex items-center gap-2 text-green-700 text-sm font-semibold uppercase">
+            <div className="flex items-center gap-2 text-green-800 font-semibold uppercase text-sm">
               <span className="p-2 bg-green-50 rounded-lg">
                 {item.icon}
               </span>
@@ -106,20 +97,20 @@ export default function Resources() {
             </div>
 
             {/* Title */}
-            <h3 className="text-lg font-semibold mt-4 text-gray-900 group-hover:text-green-700 transition">
+            <h2 className="text-2xl font-bold text-gray-900 mt-5 leading-snug">
               {item.title}
-            </h3>
+            </h2>
 
             {/* Description */}
-            <p className="text-gray-600 mt-2 text-sm leading-relaxed">
+            <p className="text-gray-600 mt-3 text-base leading-relaxed">
               {item.description}
             </p>
 
             {/* Footer */}
-            <div className="flex justify-between items-center mt-6 text-sm">
+            <div className="flex justify-between items-center mt-10 text-sm">
               <span className="text-gray-500">{item.date}</span>
-              <button className="text-green-700 font-medium hover:underline">
-                Read More →
+              <button className="text-green-800 font-semibold hover:underline flex items-center gap-1">
+                Read More <span>→</span>
               </button>
             </div>
           </div>
@@ -128,7 +119,7 @@ export default function Resources() {
 
       {/* Empty State */}
       {filteredData.length === 0 && (
-        <p className="text-center text-gray-500 mt-16">
+        <p className="text-center text-gray-500 mt-16 text-lg">
           No resources found.
         </p>
       )}
