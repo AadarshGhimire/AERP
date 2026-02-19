@@ -1,5 +1,6 @@
 import React from "react";
-
+import { ShoppingCart, BookOpen } from "lucide-react";
+import { Link } from "react-router-dom";
 const books = [
   {
     id: 1,
@@ -37,11 +38,11 @@ export default function Store() {
       {/* Tabs */}
       <div className="flex gap-8 border-b mb-8">
         <button className="flex items-center gap-2 pb-2 border-b-2 border-green-600 text-green-700 font-medium">
-          📘 Bookstore
+          <BookOpen />
         </button>
-        <button className="flex items-center gap-2 pb-2 text-gray-500">
-          🛒 App Store
-        </button>
+        <Link to="/store/books" className="flex items-center gap-2 pb-2 text-gray-500">
+          <ShoppingCart />
+        </Link>
       </div>
 
       {/* Cards */}
