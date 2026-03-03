@@ -1,13 +1,12 @@
 import express from "express";
-import mongoose from "mongoose";
 import dotenv from "dotenv";
 import cors from "cors";
-import connectDB from "./config/db.js"
-import contactRoutes from "./routers/ContactRoutes.js";
-import WhyChooseUsRoutes from "./routers/ChooseUsRoutes.js"
-import IndustryRoutes from "./routers/IndustriesRoutes.js";
-import ApproachRoutes from "./routers/ApproachRoutes.js";
-import VisionRoutes from "./routers/VisionRoutes.js";
+import connectDB from "./src/config/db.js"
+import contactRoutes from "./src/routers/ContactRoutes.js";
+import WhyChooseUsRoutes from "./src/routers/ChooseUsRoutes.js"
+import IndustryRoutes from "./src/routers/IndustriesRoutes.js";
+import ApproachRoutes from "./src/routers/ApproachRoutes.js";
+import VisionRoutes from "./src/routers/VisionRoutes.js";
 
 dotenv.config();
 const app = express();
