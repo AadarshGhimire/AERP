@@ -70,10 +70,10 @@ export default function Store() {
             {/* Buttons */}
             <div className="flex gap-3">
               <button className="flex-1 rounded-lg bg-gray-100 py-2 text-gray-700 hover:bg-gray-200">
-                👁 Preview
+                Preview
               </button>
               <button className="flex-1 rounded-lg bg-green-700 py-2 text-white hover:bg-green-800">
-                🛒 Buy Now
+               Buy Now
               </button>
             </div>
           </div>
