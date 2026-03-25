@@ -68,6 +68,9 @@ export default function NavBar() {
           <NavLink to="/contact" className="text-gray-700 hover:text-green-700 transition">
             Contact
           </NavLink>
+           <NavLink to="/courses" className="text-gray-700 hover:text-green-700 transition">
+            Courses
+          </NavLink>
         </nav>
 
         {/* Mobile Menu Button */}
@@ -88,6 +91,7 @@ export default function NavBar() {
             <NavLink to="/resources" className="text-gray-700">Resources</NavLink>
             <NavLink to="/store" className="text-gray-700">Store</NavLink>
             <NavLink to="/contact" className="text-gray-700">Contact</NavLink>
+            <NavLink to="/courses" className="text-gray-700">Courses</NavLink>
           </div>
         )}
       </div>

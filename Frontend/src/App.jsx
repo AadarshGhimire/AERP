@@ -6,7 +6,11 @@ import ServicesPage from './pages/ServicesPage.jsx'
 import ContactPage from './pages/ContactPage.jsx'
 import ResourcesPage from './pages/ResourcesPage.jsx'
 import StorePage from './pages/StorePage.jsx'
+import CoursesPage from './pages/CoursesPage.jsx'
+import MockExamPage from './pages/MockExamPage.jsx'
 import Store from './components/Store/Store.jsx'
+import AdminDashboard from './admin/AdminDashboard'
+import ManageCourses from "./admin/ManageCourses";
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route>
@@ -17,6 +21,11 @@ const router = createBrowserRouter(
       <Route path='/resources' element={<ResourcesPage />} />
       <Route path='/store' element={<StorePage />} />
       <Route path='/store/books' element={<Store />} />
+      <Route path='/courses' element={<CoursesPage />} />
+      <Route path="/exam/:id" element={<MockExamPage />} />
+      {/* Admin panel */}
+        <Route path="/admin" element={<AdminDashboard />} />
+        <Route path="/admin/courses" element={<ManageCourses />} />
     </Route>
   )
 )
