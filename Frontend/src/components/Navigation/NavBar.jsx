@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { Menu, X, ChevronDown } from "lucide-react";
-
+import FadeInSection from "../Animation/FadeInSection.jsx"
 export default function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
+    <FadeInSection>
     <header className="w-full bg-white shadow-sm sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         
@@ -92,5 +93,6 @@ export default function NavBar() {
         )}
       </div>
     </header>
+    </FadeInSection>
   );
 }

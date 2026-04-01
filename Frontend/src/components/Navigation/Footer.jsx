@@ -1,11 +1,10 @@
 import React from "react";
-
+import FadeInSection from "../Animation/FadeInSection.jsx";
 export default function Footer() {
   return (
+    <FadeInSection>
     <footer className="w-full bg-gradient-to-r from-[#0C1528] via-[#0B1730] to-[#0A1C3A] text-white px-6 py-16">
-      
       <div className="flex flex-col gap-10 lg:grid lg:grid-cols-4 lg:gap-20 max-w-7xl mx-auto">
-        
         {/* Brand */}
         <div className="flex flex-col gap-4">
           <h2 className="text-xl font-bold">AERP Engineering</h2>
@@ -13,7 +12,6 @@ export default function Footer() {
             Setting the standard for asset performance optimization and integrity assurance since our founding.
           </p>
         </div>
-        
         {/* Solutions */}
         <div className="flex flex-col gap-3">
           <h3 className="text-sm font-semibold tracking-wider">SOLUTIONS</h3>
@@ -54,5 +52,6 @@ export default function Footer() {
         © 2026 AERP Engineering. All rights reserved.
       </p>
     </footer>
+    </FadeInSection>
   );
 }

@@ -8,12 +8,12 @@ import Contact from '../components/Home/Contact.jsx'
 import Footer from '../components/Navigation/Footer.jsx'
 export default function HomePage() {
   return (
-    <div className='animate-drop'>
+    <div>
     <NavBar />
     <Hero />
+    <IndustriesWeServe />
     <WhyChooseUs />
     <HeritageOfExcellence />
-    <IndustriesWeServe />
     <Contact />
     <Footer />
     </div>

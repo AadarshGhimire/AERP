@@ -1,7 +1,9 @@
 import React from "react";
 import { Shield,Zap,Users } from "lucide-react";
+import FadeInSection from "../Animation/FadeInSection.jsx";
 export default function WhyChooseUs() {
   return (
+    <FadeInSection>
     <section className="w-full bg-slate-50 py-24">
       <div className="max-w-7xl mx-auto px-4 lg:px-16">
         {/* Section Header */}
@@ -52,5 +54,6 @@ export default function WhyChooseUs() {
         </div>
       </div>
     </section>
+    </FadeInSection>
   );
 }

@@ -1,8 +1,9 @@
 import React from "react";
 import { Target, Eye, Heart } from "lucide-react";
-
+import FadeInSection from "../Animation/FadeInSection.jsx";
 export default function PurposeVisionValues() {
   return (
+    <FadeInSection>
     <section className="w-full bg-slate-50 px-6 py-16">
       <div className="max-w-7xl mx-auto">
 
@@ -49,5 +50,6 @@ export default function PurposeVisionValues() {
         </div>
       </div>
     </section>
+    </FadeInSection>
   );
 }

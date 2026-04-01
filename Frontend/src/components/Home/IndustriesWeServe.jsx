@@ -14,7 +14,7 @@ import {
   ChevronLeft,
   ChevronRight,
 } from "lucide-react";
-
+import FadeInSection from "../Animation/FadeInSection.jsx";
 export default function IndustriesWeServe() {
   const scrollRef = useRef(null);
 
@@ -108,7 +108,8 @@ export default function IndustriesWeServe() {
   };
 
   return (
-    <section className="w-full bg-white py-24">
+    <FadeInSection>
+    <section className="w-full bg-white py-24 ">
       <div className="max-w-7xl mx-auto px-6 lg:px-16">
 
         {/* Header */}
@@ -147,7 +148,7 @@ export default function IndustriesWeServe() {
           {industries.map((item, index) => (
             <div
               key={index}
-              className="group industries-we-serve-card w-[260px] sm:w-[280px] lg:w-[300px] flex-shrink-0"
+              className="group industries-we-serve-card w-[260px]  lg:w-[300px] flex-shrink-0"
             >
               <div className="industries-we-serve-card-text">
                 {item.icon}
@@ -165,5 +166,6 @@ export default function IndustriesWeServe() {
 
       </div>
     </section>
+    </FadeInSection>
   );
 }

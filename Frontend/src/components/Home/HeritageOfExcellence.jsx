@@ -1,8 +1,9 @@
 import React from "react";
 import { MoveRight, Factory, Globe, Shield, Award } from "lucide-react";
-
+import FadeInSection from "../Animation/FadeInSection.jsx";
 export default function HeritageOfExcellence() {
   return (
+    <FadeInSection>
     <section className="w-full bg-white py-24">
       <div className="max-w-7xl mx-auto px-6 lg:px-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
@@ -74,5 +75,6 @@ export default function HeritageOfExcellence() {
         </div>
       </div>
     </section>
+    </FadeInSection>
   );
 }
