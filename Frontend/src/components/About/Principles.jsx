@@ -1,11 +1,11 @@
 import React from "react";
 import { Award, Lightbulb, MessageCircle } from "lucide-react";
-
+import FadeInSection from "../Animation/FadeInSection.jsx";
 export default function Principles() {
   return (
+    <FadeInSection>
     <section className="w-full bg-white py-24">
       <div className="max-w-7xl mx-auto px-6">
-        
         {/* Section Header */}
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-bold text-slate-900">
@@ -65,5 +65,6 @@ export default function Principles() {
         </div>
       </div>
     </section>
+    </FadeInSection>
   );
 }

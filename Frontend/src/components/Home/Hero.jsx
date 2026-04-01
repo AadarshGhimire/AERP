@@ -1,9 +1,10 @@
 import React from 'react'
+import FadeInSection from "../Animation/FadeInSection.jsx";
 
 export default function Hero() {
   return (
+    <FadeInSection>
     <div className="relative w-full min-h-[60vh] lg:min-h-[80vh] flex items-center text-white overflow-hidden">
-
       {/* Background Video */}
       <video
         className="absolute top-0 left-0 w-full h-full object-cover"
@@ -42,7 +43,7 @@ export default function Hero() {
           </div>
         </div>
       </section>
-
     </div>
+    </FadeInSection>
   )
 }

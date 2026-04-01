@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Search, FileText, Video, BookOpen } from "lucide-react";
-
+import FadeInSection from '../Animation/FadeInSection.jsx'
 const resourcesData = [
   {
     id: 1,
@@ -46,6 +46,7 @@ export default function Resources() {
   });
 
   return (
+    <FadeInSection>
     <section className="max-w-7xl mx-auto px-6 py-10">
       {/* Search + Filters Bar */}
       <div className="bg-white border shadow-sm rounded-2xl px-6 py-6 flex flex-col gap-5 lg:flex-row lg:items-center lg:justify-between">
@@ -124,5 +125,6 @@ export default function Resources() {
         </p>
       )}
     </section>
+    </FadeInSection>
   );
 }

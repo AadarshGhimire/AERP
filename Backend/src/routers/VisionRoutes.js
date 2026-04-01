@@ -1,12 +1,12 @@
 import express from 'express';
-import { createPrinciple, getAllPrinciples, getPrincipleById, deletePrinciple, updatePrinciple } from '../controllers/PrinciplesControllers.js';
+import { createVision, getVisions, getVisionById, deleteVision, updateVision } from '../controllers/VisionControllers.js';
 
 const router = express.Router();
 
-router.post('/principle', createPrinciple);
-router.get('/getprinciples', getAllPrinciples);
-router.get('/principle/:id', getPrincipleById);
-router.delete('/principle/:id', deletePrinciple);
-router.put('/principle/:id', updatePrinciple);
+router.post('/vision', createVision);
+router.get('/getvisions', getVisions);
+router.get('/vision/:id', getVisionById);
+router.delete('/vision/:id', deleteVision);
+router.put('/vision/:id', updateVision);
 
 export default router;

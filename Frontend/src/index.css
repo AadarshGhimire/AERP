@@ -59,7 +59,4 @@
     }
   }
 
-  .animate-drop {
-    animation: drop 0.6s ease-out forwards;
-  }
 }

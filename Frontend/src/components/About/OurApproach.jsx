@@ -1,7 +1,8 @@
 import React from 'react'
-
+import FadeInSection from "../Animation/FadeInSection.jsx";
 export default function OurApproach() {
   return (
+    <FadeInSection>
     <section className='bg-white'>
       <div className='flex '>
         <div className='lg:w-1/2 p-8 space-y-4 text-lg'>
@@ -21,6 +22,7 @@ export default function OurApproach() {
         </div>
       </div>
     </section>
+    </FadeInSection>
   )
 }
 
